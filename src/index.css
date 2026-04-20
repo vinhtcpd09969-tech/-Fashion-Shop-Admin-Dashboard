@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Bảng màu chuẩn của Larkon */
+  --lk-bg-body: #f5f6fa;       /* Nền xám cực nhạt */
+  --lk-bg-card: #ffffff;       /* Nền thẻ trắng tinh */
+  --lk-border: #eaedf1;        /* Viền xám mỏng */
+  --lk-text-main: #2c3142;     /* Chữ đen tuyền */
+  --lk-text-muted: #798194;    /* Chữ phụ xám */
+  --lk-primary: #1e5bf9;       /* Màu nhấn (Xanh) */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--lk-bg-body) !important; /* Xóa bỏ Gradient */
+  background-image: none !important;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--lk-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 1. Trả về Container sạch sẽ - Bỏ kính mờ */
+.dashboard-container {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 0;
+  padding: 24px;
+  border: none;
+  box-shadow: none;
+}
+
+/* 2. CARD CHUẨN LARKON (Phẳng, bo góc nhỏ, viền mỏng, bóng mờ nhẹ) */
+.card-modern {
+  background-color: var(--lk-bg-card) !important;
+  border: 1px solid var(--lk-border) !important; /* Thêm viền mỏng */
+  border-radius: 12px !important; /* Bo góc nhỏ lại cho chuyên nghiệp */
+  box-shadow: 0px 4px 24px 0 rgba(20, 25, 38, 0.05); /* Bóng cực mờ */
+  transition: box-shadow 0.3s ease;
+}
+
+.card-modern:hover {
+  transform: none; /* Không bay lên khi hover */
+  box-shadow: 0px 10px 30px 0 rgba(20, 25, 38, 0.08); /* Chỉ làm đậm bóng 1 chút */
+}
+
+/* 3. TABLE CHUẨN LARKON */
+.table-custom th {
+  background-color: #f8f9fc !important;
+  color: var(--lk-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--lk-border) !important;
+  vertical-align: middle;
+}
+
+.table-custom td {
+  border-bottom: 1px solid var(--lk-border);
+  vertical-align: middle;
+}
+
+.table-custom tbody tr:hover {
+  background-color: #fcfcfd !important; /* Hover xám cực nhẹ, không dùng màu nổi */
+}
+
+/* 4. BUTTON & BADGE */
+.btn-modern {
+  border-radius: 8px; /* Bo góc nút nhỏ gọn */
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.badge {
+  padding: 0.4em 0.8em;
+  font-weight: 500;
+  border-radius: 6px !important; /* Larkon bo góc badge vừa phải */
+}
+
+/* Đảm bảo nền của vùng main trong suốt */
+main {
+  background-color: transparent !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Font chữ bớt dày hơn */
+  color: var(--lk-text-main);
+}
