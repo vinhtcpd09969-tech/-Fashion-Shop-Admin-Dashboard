@@ -1,4 +1,5 @@
 👕 Fashion Shop Admin Dashboard
+
 Hệ thống quản trị cửa hàng thời trang tích hợp đầy đủ tính năng CRUD, xác thực người dùng và phân quyền quản trị. Dự án được xây dựng theo mô hình Client-Server tách biệt, đảm bảo tính bảo mật và hiệu năng cao.
 
 🚀 Tính năng chính
@@ -52,6 +53,7 @@ MySQL: Cơ sở dữ liệu quan hệ.
 JSON Web Token (JWT): Bảo mật và xác thực API.
 
 CORS: Cấu hình cho phép Frontend truy cập tài nguyên máy chủ.
+
 📁 Cấu trúc thư mục (Source Code)
 Plaintext
 ├── backend-api/         # Mã nguồn Server (Node.js & Express)
